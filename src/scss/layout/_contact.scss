@@ -1,0 +1,120 @@
+@use "../components/" as c;
+
+.contact {
+  background-color: c.$primaryBgColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__box {
+    width: clamp(100px, 90%, 1000px);
+    margin: 80px 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__links {
+    width: 50%;
+    padding: 8% 5% 10% 5%;
+    background: radial-gradient(
+        circle at 55% 92%,
+        #426691 0 12%,
+        transparent 12.2%
+      ),
+      radial-gradient(circle at 94% 72%, #426691 0 10%, transparent 10.2%),
+      radial-gradient(
+        circle at 20% max(78%, 350px),
+        #263a53 0 7%,
+        transparent 7.2%
+      ),
+      radial-gradient(circle at 0% 0%, #263a53 0 40%, transparent 40.2%),
+      #1f2e43;
+    border-radius: 10px 0 0 10px;
+  }
+
+  &__text1 {
+    font-family: c.$titleFont;
+    color: c.$primaryBgColor;
+    font-size: 60px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  &__text2 {
+    font-family: c.$titleFont;
+    color: c.$primaryBgColor;
+    font-size: small;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 7%;
+  }
+
+  &__container {
+    width: 50%;
+    padding: 8% 5% 10% 5%;
+    background-color: c.$secondaryBgColorOpacity;
+    border-radius: 0 10px 10px 0;
+
+    &__input {
+      width: 100%;
+      border-radius: 18px;
+      padding: 7px;
+      font-size: 18px;
+      outline: none;
+      outline-color: c.$secondaryBgColor;
+      border: 6px solid c.$secondaryBgColor;
+      margin-bottom: 10px;
+    }
+  }
+  &__button {
+    width: 90px;
+    margin: 0 auto;
+    text-align: center;
+
+    &__container {
+      background-color: #5c7e96;
+      font-size: 16px;
+      color: white;
+      width: 90px;
+      height: 40px;
+      font-family: c.$primaryFont;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 1px 0px 10px rgba(151, 149, 149, 0.8);
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.342);
+      cursor: pointer;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    &__links {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+    &__container {
+      width: 100%;
+      border-radius: 0 0 10px 10px;
+    }
+    &__text1 {
+      font-size: clamp(40px, 10vw, 60px);
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .contact-box {
+      width: 95%;
+      margin: 8% 5%;
+    }
+    &__text1 {
+      font-size: clamp(30px, 12vw, 60px);
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

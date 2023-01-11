@@ -1,0 +1,89 @@
+@use "../components/" as c;
+
+.hero {
+  background-image: url(../assets/img/main-mobile.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 83vh;
+  display: flex;
+    @include c.medium {
+    background-image: url(../assets/img/main-desktop.jpg);
+    }
+
+  &__container {
+    padding-left: 15px;
+    @include c.medium { 
+        padding-left: 35px;
+        }
+    &__title {
+      color: #ffffff;
+      font-size: 1.9rem;
+      font-weight: 500;
+      margin-top: 3em;
+      font-family: c.$titleFont;
+      text-shadow: 4px 5px 9px rgba(0, 0, 0, 0.945);
+      @include c.small {
+        margin-bottom: 37px;
+      }
+      @include c.medium { 
+        font-size: 2.5rem;
+        margin-bottom: 35px;
+        }
+    }
+    
+    &__second-title {
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+      font-family: c.$titleFont;
+      text-shadow: 4px 5px 9px rgba(0, 0, 0, 0.945);
+      @include c.small {
+        width: 60%;
+        margin-bottom: 37px;
+      }
+      @include c.medium { 
+        font-size: 1.4rem;
+        margin-bottom: 35px;
+        }
+    }
+
+    &__link {
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-family: c.$titleFont;
+      text-shadow: 1px 1px 1px rgb(154, 154, 154);
+
+      &__btn {
+        width: 10rem;
+        margin-top: 2rem;
+        border-radius: 0.5rem;
+        outline: none;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1.4rem;
+        font-family: c.$titleFont;
+        color: #ffffff;
+        text-shadow: 4px 5px 9px rgba(0, 0, 0, 0.945);
+        background-color: #5c7e96;
+        box-shadow: 1px 0px 20px rgba(207, 207, 207, 0.8),
+          0px 10px 5px rgba(151, 149, 149, 0.1);
+        cursor: pointer;
+        transition: all 0.25s ease-in-out;
+        &:hover {
+          background-color: #445f72;
+        }
+        @include c.small {
+            display: block;
+            height: 55px;
+            width: 180px;
+          }
+          @include c.medium {
+            box-shadow: 1px 0px 20px rgba(109, 109, 109, 0.8),
+          0px 10px 5px rgba(151, 149, 149, 0.1);
+          margin-top: 70px;
+          }
+      }
+    }
+  }
+}

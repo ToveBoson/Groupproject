@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../ts/productDetails.ts" defer type="module"></script>
+
+    <script
+      src="https://kit.fontawesome.com/bc5eefc1c7.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../scss/main.scss" />
+    <title>Mobi Mobilskal</title>
+  </head>
+  <body>
+    <header>
+      <nav class="menu">
+        <div class="menu__mobi-container">
+          <a href="../index.html">
+            <img
+              class="menu__mobi-container--logo"
+              src="../assets/img/logo.png"
+              alt="Mobi logo"
+          /></a>
+        </div>
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__container" for="menu__toggle">
+          <span class="menu__container__button"></span>
+        </label>
+        <ul class="menu__list">
+          <li class="menu__list__link">
+            <a class="menu__list__link__anchor" href="../index.html"
+              >Startsida</a
+            >
+          </li>
+          <li class="menu__list__link">
+            <a
+              id="products"
+              class="menu__list__link__anchor"
+              href="./products.html"
+              >Produkter</a
+            >
+          </li>
+          <li class="menu__list__link">
+            <a class="menu__list__link__anchor" href="./contact.html"
+              >Kontakt</a
+            >
+          </li>
+          <li class="menu__list__link">
+            <a class="menu__list__link__anchor" href="./about.html">Om oss</a>
+          </li>
+        </ul>
+        <div class="menu__bag-box">
+          <a class="menu__bag-box__anchor" href="./shopping-cart.html"
+            ><i
+              id="menu__bag-box__anchor"
+              class="menu__bag-box__anchor--logo fa-solid fa-cart-shopping"></i>
+            <span id="amount-of-products-container"></span
+          ></a>
+        </div>
+      </nav>
+      <p class="free-shipping">Just nu! Fri frakt på alla våra skal</p>
+    </header>
+
+    <main id="mainProductDetails"></main>
+
+    <footer class="footer">
+      <ul class="footer__address">
+        <li class="footer__address__list"><strong>Adress:</strong></li>
+        <li class="footer__address__list">Gustavslundsvägen 151 D</li>
+        <li class="footer__address__list">167 51 Bromma</li>
+      </ul>
+      <ul class="footer__contact">
+        <li class="footer__contact__list">08-442 95 00</li>
+        <li class="footer__contact__list">
+          <a
+            class="footer__contact__list__link"
+            href="mailto:mobilskal@kontakt.se"
+            >mobilskal@kontakt.se</a
+          >
+        </li>
+      </ul>
+      <ul class="footer__socials">
+        <li class="footer__socials__list">
+          <a
+            href="https://www.linkedin.com/"
+            class="footer__socials__list__link"
+            target="_blank"
+            ><i
+              class="footer__socials__list__link--linkedin fa-brands fa-linkedin"></i></a
+          ><span>LinkedIn</span>
+        </li>
+        <li class="footer__socials__list">
+          <a
+            href="https://www.facebook.com/"
+            class="footer__socials__list__link"
+            target="_blank"
+            ><i
+              class="footer__socials__list__link--facebook fa-brands fa-facebook"></i></a
+          ><span>Facebook</span>
+        </li>
+        <li class="footer__socials__list">
+          <a
+            href="https://www.instagram.com/"
+            class="footer__socials__list__link"
+            target="_blank"
+            ><i
+              class="footer__socials__list__link--instagram fa-brands fa-instagram"></i></a
+          ><span>Instagram</span>
+        </li>
+        <li class="footer__socials__list">
+          <a
+            href="https://twitter.com/"
+            class="footer__socials__list__link"
+            target="_blank"
+            ><i
+              class="footer__socials__list__link--twitter fa-brands fa-twitter"></i></a
+          ><span>Twitter</span>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

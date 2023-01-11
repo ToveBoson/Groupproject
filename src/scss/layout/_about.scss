@@ -1,0 +1,83 @@
+@use "../components/" as c;
+.about {
+  background: url(/src/assets/img/about-img.png) no-repeat;
+  background-size: 75%;
+  background-position: 10% 5%;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include c.xSmall {
+    background-size: 60%;
+    background-position: 5% 5%;
+  }
+  @include c.small {
+    background-size: 60%;
+    background-position: 5% 5%;
+  }
+
+  @include c.medium {
+    background-size: 50%;
+    background-position: 5% 5%;
+  }
+  @include c.large {
+    background-size: 40%;
+    background-position: 5% 5%;
+  }
+  @include c.xxLarge {
+    background-size: 30%;
+    background-position: 5% 5%;
+  }
+
+  &__container {
+    width: 80%;
+    float: right;
+    background-color: c.$primaryBgColor;
+    padding: 40px;
+    @include c.xSmall {
+      width: 60%;
+      padding: 70px;
+    }
+
+    @include c.small {
+      width: 60%;
+      padding: 70px;
+    }
+  
+    @include c.medium {
+      width: 55%;
+      padding: 70px;
+    }
+    @include c.large {
+      width: 50%;
+      padding: 70px;
+    }
+    @include c.xxLarge {
+      width: 40%;
+      padding: 70px;
+    }
+  
+
+    &__txt {
+      margin-bottom: 40px;
+      font-size: 60px;
+      font-weight: 500;
+    }
+
+    &__text {
+      font-size: 28px;
+      color: c.$primaryColor;
+      text-align: left;
+      font-weight: 400;
+      margin-bottom: 60px;
+    }
+    &__skills {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 17px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use "../components/" as c;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  --nav-load-time: 300ms;
+  --nav-link-load-time: 500ms;
+  --projects-load-time: 0.5s;
+  --projects-time: 400ms;
+}
+
+* {
+  box-sizing: border-box;
+}

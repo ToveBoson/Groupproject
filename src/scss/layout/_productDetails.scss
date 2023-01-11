@@ -1,0 +1,171 @@
+@use "../components/" as c;
+
+.product-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  margin-top: 40px;
+  padding: 0px 10px;
+  font-family: c.$titleFont;
+
+  @include c.small {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    height: 60vh;
+  }
+
+  &__product-img {
+    max-height: 250px;
+    max-width: 250px;
+    box-shadow: 1px 0px 20px rgba(151, 149, 149, 0.8),
+      0px 10px 5px rgba(151, 149, 149, 0.1);
+    border-radius: 18px;
+
+    @include c.small {
+      max-height: 350px;
+      max-width: 350px;
+    }
+  }
+  &__info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+
+    @include c.small {
+      width: 40%;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      padding-left: 50px;
+    }
+    &__description {
+      width: 70%;
+      text-align: center;
+      @include c.small {
+        text-align: start;
+        width: 100%;
+      }
+    }
+
+    &__price {
+      font-size: 18px;
+      width: 25%;
+      text-align: center;
+      width: 150px;
+      margin-top: 0;
+      margin-bottom: 25px;
+
+      @include c.small {
+        text-align: left;
+      }
+    }
+
+    &__container-colors {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 150px;
+      margin-bottom: 15px;
+      background-color: lightgray;
+      padding: 5px 10px;
+      border-radius: 18px;
+
+      @include c.small {
+        justify-content: space-between;
+      }
+
+      &__first-color {
+        font-size: 32px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    &__amount-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 45px;
+      &__amount-number {
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      &__subtract-icon {
+        font-size: 25px;
+        cursor: pointer;
+      }
+
+      &__addition-icon {
+        font-size: 25px;
+        cursor: pointer;
+      }
+    }
+
+    &__shop-button {
+      background-color: #5c7e96;
+      font-size: 16px;
+      color: white;
+      width: 150px;
+      height: 40px;
+      font-family: c.$primaryFont;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 1px 0px 10px rgba(151, 149, 149, 0.8);
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.342);
+      cursor: pointer;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+// Case colors
+.black {
+  color: rgb(0, 0, 0);
+}
+
+.red {
+  color: rgb(248, 91, 91);
+}
+
+.blue {
+  color: rgb(58, 58, 225);
+}
+
+.green {
+  color: rgb(127, 184, 112);
+}
+
+.pink {
+  color: rgb(255, 192, 203);
+}
+
+.orange {
+  color: rgb(255, 180, 40);
+}
+
+.white {
+  color: rgb(255, 255, 255);
+}
+
+.purple {
+  color: rgb(124, 37, 107);
+}
+
+.brown {
+  color: rgb(141, 105, 81);
+}
+
+.gold {
+  color: rgb(224, 200, 61);
+}

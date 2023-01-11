@@ -1,0 +1,39 @@
+@use "../components/" as c;
+
+.confirmContainerform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 83vh;
+  text-align: center;
+  padding: 20px;
+
+  &__header {
+    font-family: c.$titleFont;
+  }
+
+  &__information {
+    font-family: c.$primaryFont;
+  }
+  &__button {
+    background-color: #5c7e96;
+    font-size: 16px;
+    color: white;
+    width: 150px;
+    height: 45px;
+    font-family: c.$primaryFont;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 0px 10px rgba(151, 149, 149, 0.8);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.342);
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    margin-top: 25px;
+    margin-bottom: 140px;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
